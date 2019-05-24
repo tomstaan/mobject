@@ -1,4 +1,4 @@
 from django.shortcuts import render
 
-def input(request):
+def index(request):
     return render(request, 'frontend/index.html')

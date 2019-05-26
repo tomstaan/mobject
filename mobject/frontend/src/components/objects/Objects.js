@@ -1,4 +1,7 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { getObjects } from '../../actions/objects';
 
 export default class Objects extends Component {
     render() {
@@ -9,3 +12,9 @@ export default class Objects extends Component {
         )
     }
 }
+
+const mapStateToProps = state => ({
+    objects: state.objects.objects
+});
+
+export default connect(Objects);

@@ -1,8 +1,8 @@
-import { GET_OBJECTS } from '../actions/types.js';
+import { GET_OBJECTS } from "../actions/types.js";
 
 const initialState = {
     objects: []
-}
+};
 
 export default function(state = initialState, action) {
     switch(action.type) {

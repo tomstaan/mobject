@@ -5,7 +5,9 @@ import { getObjects, deleteObject } from "../../actions/objects";
 
 export class Objects extends Component {
   static propTypes = {
-    objects: PropTypes.array.isRequired
+    objects: PropTypes.array.isRequired,
+    getObjects: PropTypes.func.isRequired,
+    deleteObject: PropTypes.func.isRequired
   };
 
   componentDidMount() {

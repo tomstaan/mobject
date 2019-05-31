@@ -2,7 +2,7 @@
 
 import axios from "axios";
 
-import { GET_OBJECTS, DELETE_OBJECT } from "./types";
+import { GET_OBJECTS, DELETE_OBJECT, ADD_OBJECT } from "./types";
 
 //Get Objects
 export const getObjects = () => dispatch => {
@@ -25,6 +25,19 @@ export const deleteObject = id => dispatch => {
       dispatch({
         type: DELETE_OBJECT,
         payload: id
+      });
+    })
+    .catch(err => console.log(err));
+};
+
+//ADD OBJECT
+export const addObject = object => dispatch => {
+  axios
+    .post("/api/objects/", object)
+    .then(res => {
+      dispatch({
+        type: ADD_OBJECT,
+        payload: res.data
       });
     })
     .catch(err => console.log(err));

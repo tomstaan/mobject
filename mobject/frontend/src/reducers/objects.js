@@ -1,5 +1,5 @@
 //Actions -> Types  -> Reducer
-import { GET_OBJECTS, DELETE_OBJECT } from "../actions/types.js";
+import { GET_OBJECTS, DELETE_OBJECT, ADD_OBJECT } from "../actions/types.js";
 
 //Sets Initial State
 const initialState = {
@@ -18,6 +18,11 @@ export default function(state = initialState, action) {
       return {
         ...state,
         objects: state.objects.filter(object => object.id !== action.payload)
+      };
+    case ADD_OBJECT:
+      return {
+        ...state,
+        objects: [...state.objects, action.payload]
       };
     default:
       return state;

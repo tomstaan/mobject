@@ -35,7 +35,7 @@ export class Form extends Component {
               className="form-control"
               name="title"
               onChange={this.onChange}
-              value={title}
+              value={this.title}
             />
           </div>
           <div className="form-group">
@@ -45,7 +45,7 @@ export class Form extends Component {
               className="form-control"
               name="description"
               onChange={this.onChange}
-              value={description}
+              value={this.description}
             />
           </div>
           <button type="submit" className="btn btn-primary">

@@ -2,7 +2,7 @@
 
 import axios from "axios";
 
-import { GET_OBJECTS, DELETE_OBJECT, ADD_OBJECT } from "./types";
+import { GET_OBJECTS, DELETE_OBJECT, ADD_OBJECT, GET_ERRORS } from "./types";
 
 //Get Objects
 export const getObjects = () => dispatch => {
@@ -40,5 +40,14 @@ export const addObject = object => dispatch => {
         payload: res.data
       });
     })
-    .catch(err => console.log(err));
+    .catch(err => {
+      const errors = {
+        msg: err.response.data,
+        status: err.response.status
+      };
+      dispatch({
+        type: GET_ERRORS,
+        payload: errors
+      });
+    });
 };

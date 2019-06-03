@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { addObject } from "../../actions/objects";
 
-export class Form extends Component {
+export class Form extends React.Component {
   state = {
     title: "",
     description: ""
@@ -20,6 +20,10 @@ export class Form extends Component {
     const { title, description } = this.state;
     const object = { title, description };
     this.props.addObject(object);
+    this.setState({
+      title: "",
+      description: ""
+    });
   };
 
   render() {
@@ -31,26 +35,28 @@ export class Form extends Component {
           <div className="form-group">
             <label>Title</label>
             <input
-              type="text"
               className="form-control"
+              type="text"
               name="title"
               onChange={this.onChange}
-              value={this.title}
+              value={title}
             />
           </div>
           <div className="form-group">
             <label>Description</label>
             <input
-              type="text"
               className="form-control"
+              type="text"
               name="description"
               onChange={this.onChange}
-              value={this.description}
+              value={description}
             />
           </div>
-          <button type="submit" className="btn btn-primary">
-            Submit
-          </button>
+          <div className="form-group">
+            <button type="submit" className="btn btn-primary">
+              Submit
+            </button>
+          </div>
         </form>
       </div>
     );

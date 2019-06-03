@@ -2,7 +2,7 @@
 
 import axios from "axios";
 
-import { GET_OBJECTS, DELETE_OBJECT, ADD_OBJECT, GET_ERRORS } from "./types";
+import { GET_OBJECTS, DELETE_OBJECT, ADD_OBJECT } from "./types";
 
 //Get Objects
 export const getObjects = () => dispatch => {

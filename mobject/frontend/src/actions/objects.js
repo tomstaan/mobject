@@ -1,6 +1,7 @@
 //Functionality actions
 
 import axios from "axios";
+import { createMessage } from "./messages";
 
 import { GET_OBJECTS, DELETE_OBJECT, ADD_OBJECT, GET_ERRORS } from "./types";
 
@@ -22,6 +23,8 @@ export const deleteObject = id => dispatch => {
   axios
     .delete(`/api/objects/${id}/`)
     .then(res => {
+      //Message for adding leads
+      dispatch(createMessage({ deleteObject: "Object Deleted" }));
       dispatch({
         type: DELETE_OBJECT,
         payload: id
@@ -35,6 +38,8 @@ export const addObject = object => dispatch => {
   axios
     .post("/api/objects/", object)
     .then(res => {
+      //Message for adding leads
+      dispatch(createMessage({ addObject: "Object Added" }));
       dispatch({
         type: ADD_OBJECT,
         payload: res.data

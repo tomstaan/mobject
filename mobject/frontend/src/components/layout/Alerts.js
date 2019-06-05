@@ -5,8 +5,8 @@ import PropTypes from "prop-types";
 
 export class Alerts extends Component {
   static propTypes = {
-    error: PropTypes.object.isRequired,
-    message: PropTypes.object.isRequired
+    error: PropTypes.task.isRequired,
+    message: PropTypes.task.isRequired
   };
 
   componentDidUpdate(prevProps) {
@@ -21,12 +21,12 @@ export class Alerts extends Component {
     }
 
     if (message !== prevProps.message) {
-      if (message.deleteObject) {
-        alert.success(message.deleteObject);
+      if (message.deleteTask) {
+        alert.success(message.deleteTask);
       }
-      //Triggers add object message from object actions
-      if (message.addObject) {
-        alert.success(message.addObject);
+      //Triggers add task message from task actions
+      if (message.addTask) {
+        alert.success(message.addTask);
       }
     }
   }

@@ -1,10 +1,10 @@
 from rest_framework import serializers
-from .models import Object
+from .models import Task
 
 
-# object serializer
-class ObjectSerializer(serializers.HyperlinkedModelSerializer):
+# Task serializer
+class TaskSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Object
+        model = Task
         fields = ('id', 'title', 'description', 'is_active',
                   'like_count', 'comment_count', 'date_created')

@@ -1,23 +1,23 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { getObjects, deleteObject } from "../../actions/objects";
+import { getTasks, deleteTask } from "../../actions/tasks";
 
-export class Objects extends Component {
+export class Tasks extends Component {
   static propTypes = {
-    objects: PropTypes.array.isRequired,
-    getObjects: PropTypes.func.isRequired,
-    deleteObject: PropTypes.func.isRequired
+    tasks: PropTypes.array.isRequired,
+    getTasks: PropTypes.func.isRequired,
+    deleteTask: PropTypes.func.isRequired
   };
 
   componentDidMount() {
-    this.props.getObjects();
+    this.props.getTasks();
   }
 
   render() {
     return (
       <Fragment>
-        <h2>Objects</h2>
+        <h2>Tasks</h2>
         <table className="table table-striped">
           <thead>
             <tr>
@@ -27,13 +27,13 @@ export class Objects extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.props.objects.map(object => (
-              <tr key={object.id}>
-                <td>{object.title}</td>
-                <td>{object.description}</td>
+            {this.props.Tasks.map(Task => (
+              <tr key={Task.id}>
+                <td>{Task.title}</td>
+                <td>{Task.description}</td>
                 <td>
                   <button
-                    onClick={this.props.deleteObject.bind(this, object.id)}
+                    onClick={this.props.deleteTask.bind(this, Task.id)}
                     className="btn btn-danger btn-sm"
                   >
                     Delete
@@ -49,10 +49,10 @@ export class Objects extends Component {
 }
 
 const mapStateToProps = state => ({
-  objects: state.objects.objects
+  tasks: state.tasks.tasks
 });
 
 export default connect(
   mapStateToProps,
-  { getObjects, deleteObject }
-)(Objects);
+  { getTasks, deleteTask }
+)(Tasks);

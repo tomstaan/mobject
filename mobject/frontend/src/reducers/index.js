@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
-import objects from "./objects";
+import tasks from "./tasks";
 import errors from "./errors";
 import messages from "./messages";
 
 export default combineReducers({
-  objects,
+  tasks,
   errors,
   messages
 });

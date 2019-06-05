@@ -1,8 +1,8 @@
 from rest_framework import routers
-from .api import ObjectViewSet 
+from .api import TaskViewSet
 
 
 router = routers.DefaultRouter()
-router.register('api/objects', ObjectViewSet, 'objects')
+router.register('api/tasks', TaskViewSet, 'tasks')
 
 urlpatterns = router.urls

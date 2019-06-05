@@ -1,28 +1,28 @@
 //Actions -> Types  -> Reducer
-import { GET_OBJECTS, DELETE_OBJECT, ADD_OBJECT } from "../actions/types.js";
+import { GET_TASKS, DELETE_TASK, ADD_TASK } from "../actions/types.js";
 
 //Sets Initial State
 const initialState = {
-  objects: []
+  tasks: []
 };
 
 //One function / Many cases
 export default function(state = initialState, action) {
   switch (action.type) {
-    case GET_OBJECTS:
+    case GET_TASKS:
       return {
         ...state,
-        objects: action.payload
+        tasks: action.payload
       };
-    case DELETE_OBJECT:
+    case DELETE_TASK:
       return {
         ...state,
-        objects: state.objects.filter(object => object.id !== action.payload)
+        tasks: state.tasks.filter(task => task.id !== action.payload)
       };
-    case ADD_OBJECT:
+    case ADD_TASK:
       return {
         ...state,
-        objects: [...state.objects, action.payload]
+        tasks: [...state.tasks, action.payload]
       };
     default:
       return state;

@@ -5,7 +5,7 @@ import { Provider as AlertProvider } from "react-alert";
 import AlertTemplate from "react-alert-template-basic";
 
 import Header from "./layout/Header";
-import Dashboard from "./objects/Dashboard";
+import Dashboard from "./tasks/Dashboard";
 import Alerts from "./layout/Alerts";
 
 import { Provider } from "react-redux";

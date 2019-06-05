@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { addObject } from "../../actions/objects";
+import { addTask } from "../../actions/tasks";
 
 export class Form extends React.Component {
   state = {
@@ -10,7 +10,7 @@ export class Form extends React.Component {
   };
 
   static propTypes = {
-    addObject: PropTypes.func.isRequired
+    addTask: PropTypes.func.isRequired
   };
 
   onChange = e => this.setState({ [e.target.name]: e.target.value });
@@ -18,8 +18,8 @@ export class Form extends React.Component {
   onSubmit = e => {
     e.preventDefault();
     const { title, description } = this.state;
-    const object = { title, description };
-    this.props.addObject(object);
+    const task = { title, description };
+    this.props.addTask(task);
     this.setState({
       title: "",
       description: ""
@@ -30,7 +30,7 @@ export class Form extends React.Component {
     const { title, description } = this.state;
     return (
       <div className="card card-body mt-4 mb-4">
-        <h2>Add Object</h2>
+        <h2>Add Task</h2>
         <form onSubmit={this.onSubmit}>
           <div className="form-group">
             <label>Title</label>
@@ -65,5 +65,5 @@ export class Form extends React.Component {
 
 export default connect(
   null,
-  { addObject }
+  { addTask }
 )(Form);

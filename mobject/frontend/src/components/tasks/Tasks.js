@@ -27,7 +27,7 @@ export class Tasks extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.props.Tasks.map(Task => (
+            {this.props.tasks.map(Task => (
               <tr key={Task.id}>
                 <td>{Task.title}</td>
                 <td>{Task.description}</td>

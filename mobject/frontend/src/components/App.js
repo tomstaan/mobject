@@ -9,6 +9,7 @@ import {
 
 import { Provider as AlertProvider } from "react-alert";
 import AlertTemplate from "react-alert-template-basic";
+5;
 
 import Header from "./layout/Header";
 import Dashboard from "./tasks/Dashboard";

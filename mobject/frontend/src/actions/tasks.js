@@ -3,7 +3,7 @@
 import axios from "axios";
 import { createMessage, returnErrors } from "./messages";
 
-import { GET_TASKS, DELETE_TASK, ADD_TASK, GET_ERRORS } from "./types";
+import { GET_TASKS, DELETE_TASK, ADD_TASK } from "./types";
 
 //Get Tasks
 export const getTasks = () => dispatch => {
@@ -36,7 +36,7 @@ export const deleteTask = id => dispatch => {
 };
 
 //ADD task
-export const addTask = tasks => dispatch => {
+export const addTask = task => dispatch => {
   axios
     .post("/api/tasks/", task)
     .then(res => {

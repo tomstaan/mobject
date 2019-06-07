@@ -2,13 +2,14 @@
 
 import axios from "axios";
 import { createMessage, returnErrors } from "./messages";
+import { tokenConfig } from "./auth";
 
 import { GET_TASKS, DELETE_TASK, ADD_TASK } from "./types";
 
 //Get Tasks
-export const getTasks = () => dispatch => {
+export const getTasks = () => (dispatch, getState) => {
   axios
-    .get("/api/tasks/")
+    .get("/api/tasks/", tokenConfig(getState))
     .then(res => {
       dispatch({
         type: GET_TASKS,
@@ -21,9 +22,9 @@ export const getTasks = () => dispatch => {
 };
 
 //Delete Tasks
-export const deleteTask = id => dispatch => {
+export const deleteTask = id => (dispatch, getState) => {
   axios
-    .delete(`/api/tasks/${id}/`)
+    .delete(`/api/tasks/${id}/`, tokenConfig(getState))
     .then(res => {
       //Message for adding leads
       dispatch(createMessage({ deleteTask: "task Deleted" }));
@@ -36,9 +37,9 @@ export const deleteTask = id => dispatch => {
 };
 
 //ADD task
-export const addTask = task => dispatch => {
+export const addTask = task => (dispatch, getState) => {
   axios
-    .post("/api/tasks/", task)
+    .post("/api/tasks/", task, tokenConfig(getState))
     .then(res => {
       //Message for adding leads
       dispatch(createMessage({ addTask: "task Added" }));

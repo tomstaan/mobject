@@ -18,6 +18,12 @@ export class Alerts extends Component {
       if (error.msg.description) {
         alert.error(`Description: ${error.msg.description.join()}`);
       }
+      if (error.msg.non_field_errors) {
+        alert.error(error.msg.non_field_errors.join());
+      }
+      if (error.msg.username) {
+        alert.error(error.msg.username.join());
+      }
     }
 
     if (message !== prevProps.message) {
@@ -27,6 +33,9 @@ export class Alerts extends Component {
       //Triggers add task message from task actions
       if (message.addTask) {
         alert.success(message.addTask);
+      }
+      if (message.passwordNotMatch) {
+        alert.error(message.passwordNotMatch);
       }
     }
   }

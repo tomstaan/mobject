@@ -6,7 +6,8 @@ import { addTask } from "../../actions/tasks";
 export class Form extends React.Component {
   state = {
     title: "",
-    description: ""
+    description: "",
+    priority: ""
   };
 
   static propTypes = {
@@ -17,17 +18,18 @@ export class Form extends React.Component {
 
   onSubmit = e => {
     e.preventDefault();
-    const { title, description } = this.state;
-    const task = { title, description };
+    const { title, description, priority } = this.state;
+    const task = { title, description, priority };
     this.props.addTask(task);
     this.setState({
       title: "",
-      description: ""
+      description: "",
+      priority: ""
     });
   };
 
   render() {
-    const { title, description } = this.state;
+    const { title, description, priority } = this.state;
     return (
       <div className="card card-body mt-4 mb-4">
         <h2>Add Task</h2>
@@ -50,6 +52,18 @@ export class Form extends React.Component {
               name="description"
               onChange={this.onChange}
               value={description}
+            />
+          </div>
+          <div className="form-group">
+            <label>Priority</label>
+            <input
+              className="form-control"
+              name="priority"
+              type="number"
+              onChange={this.onChange}
+              value={priority}
+              min="1"
+              max="5"
             />
           </div>
           <div className="form-group">

@@ -21,12 +21,7 @@ class Task(models.Model):
         validators=[MinValueValidator(1), MaxValueValidator(5)],
         default=1
     )
+    deadline = models.DateTimeField(blank=True, default=datetime.datetime.now)
     owner = models.ForeignKey(
         User, related_name="tasks", on_delete=models.CASCADE, null=True)
     date_created = models.DateTimeField(auto_now_add=True)
-
-    # def __str__(self):
-    #    return self.object_title
-
-    # class Meta:
-    #    verbose_name_plural = "objects"

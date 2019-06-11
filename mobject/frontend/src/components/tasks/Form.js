@@ -7,7 +7,8 @@ export class Form extends React.Component {
   state = {
     title: "",
     description: "",
-    priority: ""
+    priority: "",
+    deadline: ""
   };
 
   static propTypes = {
@@ -18,18 +19,19 @@ export class Form extends React.Component {
 
   onSubmit = e => {
     e.preventDefault();
-    const { title, description, priority } = this.state;
-    const task = { title, description, priority };
+    const { title, description, priority, deadline } = this.state;
+    const task = { title, description, priority, deadline };
     this.props.addTask(task);
     this.setState({
       title: "",
       description: "",
-      priority: ""
+      priority: "",
+      deadline: ""
     });
   };
 
   render() {
-    const { title, description, priority } = this.state;
+    const { title, description, priority, date } = this.state;
     return (
       <div className="card card-body mt-4 mb-4">
         <h2>Add Task</h2>
@@ -64,6 +66,16 @@ export class Form extends React.Component {
               value={priority}
               min="1"
               max="5"
+            />
+          </div>
+          <div className="form-group">
+            <label>deadline</label>
+            <input
+              className="form-control"
+              name="deadline"
+              type="deadline"
+              onChange={this.onChange}
+              value={deadline}
             />
           </div>
           <div className="form-group">

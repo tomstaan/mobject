@@ -31,7 +31,7 @@ export class Form extends React.Component {
   };
 
   render() {
-    const { title, description, priority, date } = this.state;
+    const { title, description, priority, deadline } = this.state;
     return (
       <div className="card card-body mt-4 mb-4">
         <h2>Add Task</h2>
@@ -73,7 +73,7 @@ export class Form extends React.Component {
             <input
               className="form-control"
               name="deadline"
-              type="deadline"
+              type="date"
               onChange={this.onChange}
               value={deadline}
             />

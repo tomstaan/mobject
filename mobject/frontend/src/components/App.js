@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
-import styles from "./style/Dashboard.module.css";
+import "./style/App.module.css";
+import "./style/Dashboard.module.css";
 import ReactDOM from "react-dom";
 import {
   HashRouter as Router,
@@ -35,24 +36,26 @@ class App extends Component {
 
   render() {
     return (
-      <div className={styles.background}>
-        <Provider store={store}>
-          <AlertProvider template={AlertTemplate} {...alertOptions}>
-            <Router>
-              <Fragment>
-                <Header />
-                <Alerts />
-                <div className="container">
+      <div className="cont-back">
+        <div className="col-md-12">
+          <Provider store={store}>
+            <AlertProvider template={AlertTemplate} {...alertOptions}>
+              <Router>
+                <Fragment>
+                  <div className="header-back">
+                    <Header />
+                  </div>
+                  <Alerts />
                   <Switch>
                     <PrivateRoute exact path="/" component={Dashboard} />
                     <Route exact path="/register" component={Register} />
                     <Route exact path="/login" component={Login} />
                   </Switch>
-                </div>
-              </Fragment>
-            </Router>
-          </AlertProvider>
-        </Provider>
+                </Fragment>
+              </Router>
+            </AlertProvider>
+          </Provider>
+        </div>
       </div>
     );
   }

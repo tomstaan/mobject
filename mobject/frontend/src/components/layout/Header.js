@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./../style/App.module.css";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
@@ -13,6 +14,7 @@ export class Header extends Component {
   render() {
     const { isAuthenticated, user } = this.props.auth;
 
+    // Menu for users
     const authLinks = (
       <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
         <span className="navbar-text mr-3">
@@ -29,6 +31,7 @@ export class Header extends Component {
       </ul>
     );
 
+    //Menu for guests
     const guestLinks = (
       <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
         <li className="nav-item">

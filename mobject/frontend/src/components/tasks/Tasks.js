@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import "./../style/Dashboard.module.css";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { getTasks, deleteTask } from "../../actions/tasks";
@@ -17,32 +18,48 @@ export class Tasks extends Component {
   render() {
     return (
       <Fragment>
-        <h2>Tasks</h2>
-        <table className="table table-striped">
-          <thead>
-            <tr>
-              <th>title</th>
-              <th>description</th>
-              <th />
-            </tr>
-          </thead>
-          <tbody>
-            {this.props.tasks.map(Task => (
-              <tr key={Task.id}>
-                <td>{Task.title}</td>
-                <td>{Task.description}</td>
-                <td>
-                  <button
-                    onClick={this.props.deleteTask.bind(this, Task.id)}
-                    className="btn btn-danger btn-sm"
-                  >
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <div className="col-md-12">
+          <div className="dashboard-tasks">
+            {this.props.tasks.map(Task => {
+              if (Task.priority == 1) {
+                return (
+                  <div className="dashboard-task-1" key={Task.id}>
+                    <div className="dashboard-task-content-1">
+                      <label>{Task.deadline}</label>
+                      <h3>{Task.title}</h3>
+                      <div />
+                      <p />
+                    </div>
+                  </div>
+                );
+              } else if (Task.priority == 2) {
+                return (
+                  <div className="dashboard-task-2" key={Task.id}>
+                    <h3>{Task.title}</h3>
+                  </div>
+                );
+              } else if (Task.priority == 3) {
+                return (
+                  <div className="dashboard-task-3" key={Task.id}>
+                    <h3>{Task.title}</h3>
+                  </div>
+                );
+              } else if (Task.priority == 4) {
+                return (
+                  <div className="dashboard-task-4" key={Task.id}>
+                    <h3>{Task.title}</h3>
+                  </div>
+                );
+              } else if (Task.priority == 5) {
+                return (
+                  <div className="dashboard-task-5" key={Task.id}>
+                    <h3>{Task.title}</h3>
+                  </div>
+                );
+              }
+            })}
+          </div>
+        </div>
       </Fragment>
     );
   }

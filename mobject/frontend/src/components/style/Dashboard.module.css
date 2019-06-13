@@ -1,137 +1,116 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/*      Main CSS         */
-
-.background {
-  background-color: #0066ff;
-  width: 100%;
+.dashboard-tasks {
   position: relative;
+  width: 100%;
+  margin: auto;
+  max-height: 90vh;
+  top: 0px;
+}
+.dashboard-task-1,
+.dashboard-task-2,
+.dashboard-task-3,
+.dashboard-task-4,
+.dashboard-task-5 {
+  margin: 20px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  float: left;
+  background: linear-gradient(
+    167deg,
+    rgba(3, 10, 25, 1) 0%,
+    rgba(23, 40, 72, 1) 100%
+  );
+
+  border-radius: 100%;
+  -webkit-box-shadow: 7px 7px 51px -7px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: 7px 7px 51px -7px rgba(0, 0, 0, 0.21);
+  box-shadow: 7px 7px 51px -7px rgba(0, 0, 0, 0.21);
+  transition: ease 0.3s;
+}
+.dashboard-task-1:active,
+.dashboard-task-2:active,
+.dashboard-task-3:active,
+.dashboard-task-4:active,
+.dashboard-task-5:active {
+  transform: scale(0.95);
+  -webkit-box-shadow: 7px 7px 51px -7px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 7px 7px 51px -7px rgba(0, 0, 0, 0);
+  box-shadow: 7px 7px 51px -7px rgba(0, 0, 0, 0);
+}
+.dashboard-task-1 h3,
+.dashboard-task-2 h3,
+.dashboard-task-3 h3,
+.dashboard-task-4 h3,
+.dashboard-task-5 h3 {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  vertical-align: middle;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.dashboard-task-1 {
+  height: 200px;
+  width: 200px;
+}
+
+.dashboard-task-1 h3 {
+  height: 200px;
+  line-height: 200px;
+  font-size: 25px;
+}
+.dashboard-task-content-1 {
+  width: 90%;
+  margin: auto;
+}
+
+.dashboard-task-2 {
+  height: 225px;
+  width: 225px;
+}
+
+.dashboard-task-2 h3 {
+  height: 225px;
+  line-height: 225px;
+  font-size: 25px;
+}
+.dashboard-task-3 {
+  height: 250px;
+  width: 250px;
+}
+
+.dashboard-task-3 h3 {
+  height: 250px;
+  line-height: 250px;
+  font-size: 25px;
+}
+.dashboard-task-4 {
+  height: 275px;
+  width: 275px;
+}
+
+.dashboard-task-4 h3 {
+  height: 275px;
+  line-height: 275px;
+  font-size: 25px;
+}
+.dashboard-task-5 {
+  height: 300px;
+  width: 300px;
+}
+
+.dashboard-task-5 h3 {
+  height: 300px;
+  line-height: 300px;
+  font-size: 25px;
 }

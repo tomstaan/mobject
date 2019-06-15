@@ -44,12 +44,12 @@ export class Tasks extends Component {
                     <div className="dashboard-task-cover">
                       <div className="dashboard-task-buttons">
                         <div className="dashboard-task-settings">
-                          <button>
+                          <button type="button">
                             <img src={settingsButton} alt={"settings"}></img>
                           </button>
                         </div>
                         <div className="dashboard-task-complete">
-                          <button>
+                          <button type="button">
                             <img src={completeButton} alt={"add"}></img>
                           </button>
                         </div>
@@ -80,12 +80,12 @@ export class Tasks extends Component {
                     <div className="dashboard-task-cover">
                       <div className="dashboard-task-buttons">
                         <div className="dashboard-task-settings">
-                          <button>
+                          <button type="button">
                             <img src={settingsButton} alt={"settings"}></img>
                           </button>
                         </div>
                         <div className="dashboard-task-complete">
-                          <button>
+                          <button type="button">
                             <img src={completeButton} alt={"add"}></img>
                           </button>
                         </div>
@@ -113,12 +113,12 @@ export class Tasks extends Component {
                     <div className="dashboard-task-cover">
                       <div className="dashboard-task-buttons">
                         <div className="dashboard-task-settings">
-                          <button>
+                          <button type="button">
                             <img src={settingsButton} alt={"settings"}></img>
                           </button>
                         </div>
                         <div className="dashboard-task-complete">
-                          <button>
+                          <button type="button">
                             <img src={completeButton} alt={"add"}></img>
                           </button>
                         </div>
@@ -146,12 +146,12 @@ export class Tasks extends Component {
                     <div className="dashboard-task-cover">
                       <div className="dashboard-task-buttons">
                         <div className="dashboard-task-settings">
-                          <button>
+                          <button type="button">
                             <img src={settingsButton} alt={"settings"}></img>
                           </button>
                         </div>
                         <div className="dashboard-task-complete">
-                          <button>
+                          <button type="button">
                             <img src={completeButton} alt={"add"}></img>
                           </button>
                         </div>
@@ -179,12 +179,12 @@ export class Tasks extends Component {
                     <div className="dashboard-task-cover">
                       <div className="dashboard-task-buttons">
                         <div className="dashboard-task-settings">
-                          <button>
+                          <button type="button">
                             <img src={settingsButton} alt={"settings"}></img>
                           </button>
                         </div>
                         <div className="dashboard-task-complete">
-                          <button>
+                          <button type="button">
                             <img src={completeButton} alt={"add"}></img>
                           </button>
                         </div>

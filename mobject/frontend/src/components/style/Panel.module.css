@@ -3,7 +3,6 @@
   width: 7%;
   min-width: 100px;
   height: 100vh;
-  background-color: #efefef;
   float: left;
 }
 
@@ -11,5 +10,164 @@
   position: relative;
   margin: auto;
   width: 70%;
+  top: 30px;
+  height: 94vh;
   background-color: #fff;
+}
+
+.profile-button {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  border-radius: 9px;
+  transition: 0.3s ease;
+}
+.profile-button button {
+  width: 70px;
+  border-radius: 9px;
+  height: 70px;
+  position: relative;
+  outline: none;
+  transition: 0.3s ease;
+  -webkit-box-shadow: 6px 6px 17px -9px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 6px 6px 17px -9px rgba(0, 0, 0, 0.43);
+  box-shadow: 6px 6px 17px -9px rgba(0, 0, 0, 0.43);
+  background: linear-gradient(
+    159deg,
+    rgba(8, 15, 40, 1) 0%,
+    rgba(13, 28, 64, 1) 100%
+  );
+  border: none;
+}
+.profile-button button:focus {
+  outline: none;
+  border: none;
+}
+.profile-button:active {
+  transform: scale(0.97);
+}
+.profile-button img {
+  width: 35px;
+  height: 35px;
+  position: relative;
+}
+
+.filter-button {
+  width: 70px;
+  height: 70px;
+  margin-top: 10px;
+  position: relative;
+  border-radius: 9px;
+  overflow: hidden;
+  transition: 0.3s ease;
+  -webkit-box-shadow: 6px 6px 17px -9px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 6px 6px 17px -9px rgba(0, 0, 0, 0.43);
+  box-shadow: 6px 6px 17px -9px rgba(0, 0, 0, 0.43);
+}
+.filter-button button {
+  width: 70px;
+  border-radius: 9px;
+  height: 70px;
+  position: relative;
+  outline: none;
+  transition: 0.3s ease;
+
+  background-color: #fff;
+  border: none;
+}
+
+.filter-button button:focus {
+  outline: none;
+  border: none;
+}
+.filter-button:active {
+  transform: scale(0.97);
+}
+.filter-button img {
+  width: 35px;
+  height: 35px;
+  position: relative;
+}
+
+.search-button {
+  width: 70px;
+  height: 70px;
+  margin-top: 10px;
+  position: relative;
+  border-radius: 9px;
+  overflow: hidden;
+  -webkit-box-shadow: 6px 6px 17px -9px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 6px 6px 17px -9px rgba(0, 0, 0, 0.43);
+  box-shadow: 6px 6px 17px -9px rgba(0, 0, 0, 0.43);
+  transition: 0.3s ease;
+}
+.search-button button {
+  width: 70px;
+  border-radius: 9px;
+  height: 70px;
+  position: relative;
+  outline: none;
+  transition: 0.3s ease;
+  background-color: #fff;
+  border: none;
+}
+.search-button button:focus {
+  outline: none;
+  border: none;
+}
+.search-button:active {
+  transform: scale(0.97);
+}
+.search-button img {
+  width: 35px;
+  height: 35px;
+  position: relative;
+}
+
+.profile-button:hover,
+.filter-button:hover,
+.search-button:hover {
+  opacity: 0.85;
+}
+
+.add-button {
+  width: 70px;
+  height: 70px;
+  bottom: 0px;
+  position: absolute;
+  border-radius: 100%;
+  overflow: hidden;
+  -webkit-box-shadow: 6px 6px 17px -9px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 6px 6px 17px -9px rgba(0, 0, 0, 0.43);
+  box-shadow: 6px 6px 17px -9px rgba(0, 0, 0, 0.43);
+  transition: 0.3s ease;
+}
+.add-button:hover {
+  opacity: 0.85;
+}
+.add-button button {
+  width: 70px;
+  border-radius: 100%;
+  height: 70px;
+  position: relative;
+  outline: none;
+  transition: 0.3s ease;
+  background: linear-gradient(
+    159deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 145, 0, 1) 100%
+  );
+  border: none;
+}
+.add-button button:focus {
+  outline: none;
+  border: none;
+}
+.add-button:active {
+  transform: scale(0.97);
+}
+.add-button img {
+  width: 35px;
+  height: 35px;
+  position: relative;
 }

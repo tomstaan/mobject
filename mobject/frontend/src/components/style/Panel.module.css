@@ -1,0 +1,15 @@
+.panel-back {
+  position: fixed;
+  width: 7%;
+  min-width: 100px;
+  height: 100vh;
+  background-color: #efefef;
+  float: left;
+}
+
+.dash-buttons {
+  position: relative;
+  margin: auto;
+  width: 70%;
+  background-color: #fff;
+}

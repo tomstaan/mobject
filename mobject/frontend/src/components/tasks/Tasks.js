@@ -3,6 +3,9 @@ import "./../style/Dashboard.module.css";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { getTasks, deleteTask } from "../../actions/tasks";
+//Images
+import settingsButton from "./../style/images/settings.png";
+import completeButton from "./../style/images/complete.png";
 
 export class Tasks extends Component {
   static propTypes = {
@@ -23,37 +26,170 @@ export class Tasks extends Component {
             {this.props.tasks.map(Task => {
               if (Task.priority == 1) {
                 return (
-                  <div className="dashboard-task-1" key={Task.id}>
-                    <div className="dashboard-task-content-1">
+                  <div className="dashboard-task" key={Task.id}>
+                    <div className="dashboard-task-content">
                       <label>{Task.deadline}</label>
                       <h3>{Task.title}</h3>
-                      <div />
-                      <p />
+                      <div className="dashboard-task-line">
+                        <div className="dashboard-task-inline-1"></div>
+                      </div>
+                      <p>
+                        There are many variations of passages of Lorem Ipsum
+                        available, but the majority have suffered alteration in
+                        some form, by injected humour, or randomised words which
+                        don't look even slightly believable. If you are going to
+                        use a passage of Lorem Ipsum, you need to
+                      </p>
+                    </div>
+                    <div className="dashboard-task-cover">
+                      <div className="dashboard-task-buttons">
+                        <div className="dashboard-task-settings">
+                          <button>
+                            <img src={settingsButton} alt={"settings"}></img>
+                          </button>
+                        </div>
+                        <div className="dashboard-task-complete">
+                          <button>
+                            <img src={completeButton} alt={"add"}></img>
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 );
               } else if (Task.priority == 2) {
                 return (
-                  <div className="dashboard-task-2" key={Task.id}>
-                    <h3>{Task.title}</h3>
+                  <div className="dashboard-task" key={Task.id}>
+                    <div className="dashboard-task-content">
+                      <label>{Task.deadline}</label>
+                      <h3>{Task.title}</h3>
+                      <div className="dashboard-task-line">
+                        <div
+                          title="Priority"
+                          className="dashboard-task-inline-2"
+                        ></div>
+                      </div>
+                      <p>
+                        There are many variations of passages of Lorem Ipsum
+                        available, but the majority have suffered alteration in
+                        some form, by injected humour, or randomised words which
+                        don't look even slightly believable. If you are going to
+                        use a passage of Lorem Ipsum, you need to
+                      </p>
+                    </div>
+                    <div className="dashboard-task-cover">
+                      <div className="dashboard-task-buttons">
+                        <div className="dashboard-task-settings">
+                          <button>
+                            <img src={settingsButton} alt={"settings"}></img>
+                          </button>
+                        </div>
+                        <div className="dashboard-task-complete">
+                          <button>
+                            <img src={completeButton} alt={"add"}></img>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 );
               } else if (Task.priority == 3) {
                 return (
-                  <div className="dashboard-task-3" key={Task.id}>
-                    <h3>{Task.title}</h3>
+                  <div className="dashboard-task" key={Task.id}>
+                    <div className="dashboard-task-content">
+                      <label>{Task.deadline}</label>
+                      <h3>{Task.title}</h3>
+                      <div className="dashboard-task-line">
+                        <div className="dashboard-task-inline-3"></div>
+                      </div>
+                      <p>
+                        There are many variations of passages of Lorem Ipsum
+                        available, but the majority have suffered alteration in
+                        some form, by injected humour, or randomised words which
+                        don't look even slightly believable. If you are going to
+                        use a passage of Lorem Ipsum, you need to
+                      </p>
+                    </div>
+                    <div className="dashboard-task-cover">
+                      <div className="dashboard-task-buttons">
+                        <div className="dashboard-task-settings">
+                          <button>
+                            <img src={settingsButton} alt={"settings"}></img>
+                          </button>
+                        </div>
+                        <div className="dashboard-task-complete">
+                          <button>
+                            <img src={completeButton} alt={"add"}></img>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 );
               } else if (Task.priority == 4) {
                 return (
-                  <div className="dashboard-task-4" key={Task.id}>
-                    <h3>{Task.title}</h3>
+                  <div className="dashboard-task" key={Task.id}>
+                    <div className="dashboard-task-content">
+                      <label>{Task.deadline}</label>
+                      <h3>{Task.title}</h3>
+                      <div className="dashboard-task-line">
+                        <div className="dashboard-task-inline-4"></div>
+                      </div>
+                      <p>
+                        There are many variations of passages of Lorem Ipsum
+                        available, but the majority have suffered alteration in
+                        some form, by injected humour, or randomised words which
+                        don't look even slightly believable. If you are going to
+                        use a passage of Lorem Ipsum, you need to
+                      </p>
+                    </div>
+                    <div className="dashboard-task-cover">
+                      <div className="dashboard-task-buttons">
+                        <div className="dashboard-task-settings">
+                          <button>
+                            <img src={settingsButton} alt={"settings"}></img>
+                          </button>
+                        </div>
+                        <div className="dashboard-task-complete">
+                          <button>
+                            <img src={completeButton} alt={"add"}></img>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 );
               } else if (Task.priority == 5) {
                 return (
-                  <div className="dashboard-task-5" key={Task.id}>
-                    <h3>{Task.title}</h3>
+                  <div className="dashboard-task" key={Task.id}>
+                    <div className="dashboard-task-content">
+                      <label>{Task.deadline}</label>
+                      <h3>{Task.title}</h3>
+                      <div className="dashboard-task-line">
+                        <div className="dashboard-task-inline-5"></div>
+                      </div>
+                      <p>
+                        There are many variations of passages of Lorem Ipsum
+                        available, but the majority have suffered alteration in
+                        some form, by injected humour, or randomised words which
+                        don't look even slightly believable. If you are going to
+                        use a passage of Lorem Ipsum, you need to
+                      </p>
+                    </div>
+                    <div className="dashboard-task-cover">
+                      <div className="dashboard-task-buttons">
+                        <div className="dashboard-task-settings">
+                          <button>
+                            <img src={settingsButton} alt={"settings"}></img>
+                          </button>
+                        </div>
+                        <div className="dashboard-task-complete">
+                          <button>
+                            <img src={completeButton} alt={"add"}></img>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 );
               }

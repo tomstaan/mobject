@@ -25,8 +25,11 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "css-loader": "^3.0.0",
+    "file-loader": "^4.0.0",
+    "image-webpack-loader": "^5.0.0",
     "prettier": "^1.17.1",
     "style-loader": "^0.23.1",
+    "url-loader": "^2.0.0",
     "webpack": "^4.32.1",
     "webpack-cli": "^3.3.2"
   },

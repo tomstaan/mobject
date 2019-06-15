@@ -17,6 +17,7 @@ class Task(models.Model):
     is_active = models.BooleanField(default=True)
     like_count = models.BigIntegerField(default=0)
     comment_count = models.BigIntegerField(default=0)
+    completed = models.BooleanField(default=False, null=False)
     priority = models.IntegerField(
         validators=[MinValueValidator(1), MaxValueValidator(5)],
         default=1

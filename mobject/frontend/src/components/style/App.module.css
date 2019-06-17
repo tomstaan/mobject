@@ -130,6 +130,10 @@ table {
 
 /*      Main CSS         */
 
+body {
+  background-color: #fff;
+}
+
 .add-task-container {
   position: relative;
   display: none;

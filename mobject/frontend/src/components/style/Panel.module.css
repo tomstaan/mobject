@@ -9,23 +9,22 @@
 .dash-buttons {
   position: relative;
   margin: auto;
-  width: 70%;
+  width: 60%;
   top: 30px;
   height: 94vh;
-  background-color: #fff;
 }
 
 .profile-button {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   position: relative;
   border-radius: 9px;
   transition: 0.3s ease;
 }
 .profile-button button {
-  width: 70px;
+  width: 60px;
   border-radius: 9px;
-  height: 70px;
+  height: 60px;
   position: relative;
   outline: none;
   transition: 0.3s ease;
@@ -53,8 +52,8 @@
 }
 
 .filter-button {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   margin-top: 10px;
   position: relative;
   border-radius: 9px;
@@ -65,9 +64,9 @@
   box-shadow: 6px 6px 17px -9px rgba(0, 0, 0, 0.43);
 }
 .filter-button button {
-  width: 70px;
+  width: 60px;
   border-radius: 9px;
-  height: 70px;
+  height: 60px;
   position: relative;
   outline: none;
   transition: 0.3s ease;
@@ -90,8 +89,8 @@
 }
 
 .search-button {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   margin-top: 10px;
   position: relative;
   border-radius: 9px;
@@ -102,9 +101,9 @@
   transition: 0.3s ease;
 }
 .search-button button {
-  width: 70px;
+  width: 60px;
   border-radius: 9px;
-  height: 70px;
+  height: 60px;
   position: relative;
   outline: none;
   transition: 0.3s ease;
@@ -131,8 +130,8 @@
 }
 
 .add-button {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   bottom: 0px;
   position: absolute;
   border-radius: 100%;
@@ -146,9 +145,9 @@
   opacity: 0.85;
 }
 .add-button button {
-  width: 70px;
+  width: 60px;
   border-radius: 100%;
-  height: 70px;
+  height: 60px;
   position: relative;
   outline: none;
   transition: 0.3s ease;
@@ -170,4 +169,5 @@
   width: 35px;
   height: 35px;
   position: relative;
+  margin: auto;
 }

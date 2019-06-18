@@ -1,11 +1,14 @@
 import React, { Component, Fragment } from "react";
 import "./../style/Dashboard.module.css";
+import "./../style/Complete.module.css";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { getTasks, deleteTask, completeTask } from "../../actions/tasks";
 //Images
 import settingsButton from "./../style/images/settings.png";
 import completeButton from "./../style/images/complete.png";
+import completedButton from "./../style/images/check.png";
+import deleteButton from "./../style/images/delete.png";
 
 export class Tasks extends Component {
   static propTypes = {
@@ -22,9 +25,18 @@ export class Tasks extends Component {
   render() {
     const task_completed = (
       <div className="task-complete-back">
+        <button className="task-delete-confirm">
+          <img src={deleteButton} alt={"delete"} />
+        </button>
         <div className="task-complete-cont">
-          <div className="task-complete-circle" />
-          <h4>Undo</h4>
+          <div className="task-complete-circle">
+            <div className="task-complete-svg">
+              <img src={completedButton} alt={"completed"} />
+            </div>
+          </div>
+          <a>
+            <h4>Undo</h4>
+          </a>
         </div>
       </div>
     );

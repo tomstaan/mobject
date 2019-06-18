@@ -1,0 +1,97 @@
+.task-complete-back {
+  position: absolute;
+  z-index: 200;
+  height: 100%;
+  top: 0px;
+  background-color: #000;
+  width: 100%;
+  border-radius: 13px;
+  background: linear-gradient(
+    159deg,
+    rgba(3, 10, 25, 0.6027661064425771) 0%,
+    rgba(3, 10, 25, 0.5999649859943977) 100%
+  );
+}
+.task-complete-cont {
+  position: relative;
+  background-color: transparent;
+  width: 100px;
+  padding-top: 110px;
+  height: 120px;
+  margin: auto;
+}
+.task-complete-cont h4 {
+  font-weight: normal;
+  color: #ff9100;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  font-size: 16px;
+  text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.8);
+  font-weight: regular;
+  transition: 0.3s ease;
+  position: relative;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+.task-complete-cont h4:hover {
+  opacity: 0.8;
+}
+.task-complete-circle {
+  height: 100px;
+  width: 100px;
+  margin-bottom: 8px;
+  border-radius: 100%;
+  border: 2px solid #fff;
+  position: relative;
+}
+.task-complete-svg {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 30px;
+}
+.task-complete-svg img {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+}
+.task-delete-confirm {
+  position: relative;
+  border-radius: 100%;
+  height: 45px;
+  width: 45px;
+  background-color: #ff0000;
+  float: right;
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.39);
+  -moz-box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.39);
+  box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.39);
+  right: 8px;
+  transition: 0.3s ease;
+}
+.task-delete-confirm:active {
+  -webkit-box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0);
+  -moz-box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0);
+  box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0);
+  transform: scale(0.98);
+  opacity: 0.8;
+  outline: none;
+  border: none;
+}
+.task-delete-confirm:focus {
+  outline: none;
+  border: none;
+}
+.task-delete-confirm img {
+  width: 26px;
+  height: 26px;
+  position: relative;
+  margin: auto;
+}

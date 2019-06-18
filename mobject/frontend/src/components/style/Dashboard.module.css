@@ -133,7 +133,7 @@
   cursor: pointer;
   z-index: 100;
   padding-left: 7px;
-  font-weight: normal;
+
   width: 75%;
   color: #fff;
   text-align: left;
@@ -147,7 +147,8 @@
 }
 .dashboard-task p {
   font-size: 15px;
-  line-height: 16px;
+  line-height: 18px;
+  font-weight: "regular";
 }
 
 .dashboard-task-cover {

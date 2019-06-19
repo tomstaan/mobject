@@ -1,5 +1,10 @@
 //Actions -> Types  -> Reducer
-import { GET_TASKS, DELETE_TASK, ADD_TASK } from "../actions/types.js";
+import {
+  GET_TASKS,
+  DELETE_TASK,
+  ADD_TASK,
+  COMPLETE_TASK
+} from "../actions/types.js";
 
 //Sets Initial State
 const initialState = {
@@ -24,8 +29,12 @@ export default function(state = initialState, action) {
         ...state,
         tasks: [...state.tasks, action.payload]
       };
+    case COMPLETE_TASK:
+      return {
+        ...state,
+        tasks: [...state.tasks, action.payload]
+      };
     default:
       return state;
   }
 }
-6;

@@ -8,15 +8,15 @@
   border-radius: 13px;
   background: linear-gradient(
     159deg,
-    rgba(3, 10, 25, 0.6027661064425771) 0%,
-    rgba(3, 10, 25, 0.5999649859943977) 100%
+    rgba(3, 10, 25, 0.7027661064425771) 0%,
+    rgba(3, 10, 25, 0.7) 100%
   );
 }
 .task-complete-cont {
   position: relative;
   background-color: transparent;
   width: 100px;
-  padding-top: 110px;
+  padding-top: 130px;
   height: 120px;
   margin: auto;
 }
@@ -31,7 +31,7 @@
   user-select: none;
   font-size: 16px;
   text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.8);
-  font-weight: regular;
+  font-weight: bold;
   transition: 0.3s ease;
   position: relative;
   text-align: center;
@@ -84,6 +84,9 @@
   opacity: 0.8;
   outline: none;
   border: none;
+}
+.task-delete-confirm:hover {
+  opacity: 0.9;
 }
 .task-delete-confirm:focus {
   outline: none;

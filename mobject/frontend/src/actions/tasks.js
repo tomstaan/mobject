@@ -54,16 +54,18 @@ export const addTask = task => (dispatch, getState) => {
 };
 
 //Complete task Task
-export const completeTask = task => (dispatch, getState) => {
+export const completeTask = id => (dispatch, getState) => {
   axios
-    .put(`/api/tasks/${id}/`, task, tokenConfig(getState))
+    .put(`/api/tasks/${id}/`, tokenConfig(getState))
     .then(res => {
       //Message for adding leads
       dispatch(createMessage({ completeTask: "task completed" }));
       dispatch({
         type: COMPLETE_TASK,
-        payload: res.data
+        payload: id
       });
     })
-    .catch(err => console.log(err));
+    .catch(err =>
+      dispatch(returnErrors(err.response.data, err.response.status))
+    );
 };

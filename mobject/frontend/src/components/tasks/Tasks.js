@@ -11,6 +11,12 @@ import completedButton from "./../style/images/check.png";
 import deleteButton from "./../style/images/delete.png";
 
 export class Tasks extends Component {
+  state = {
+    title: this.props.initialValue,
+    description: this.props.initialValue,
+    completed: this.props.initialValue
+  };
+
   static propTypes = {
     tasks: PropTypes.array.isRequired,
     getTasks: PropTypes.func.isRequired,
@@ -18,8 +24,20 @@ export class Tasks extends Component {
     completeTask: PropTypes.func.isRequired
   };
 
+  handleClick = event => {
+    console.log(this.state);
+    this.setState({
+      title: this.props.tasks.title,
+      description: this.props.tasks.description,
+      completed: true
+    });
+    console.log(this.state);
+    this.props.completeTask(this.state);
+  };
+
   componentDidMount() {
     this.props.getTasks();
+    this.props.completeTask();
   }
 
   render() {
@@ -84,8 +102,16 @@ export class Tasks extends Component {
                         </button>
                       </div>
                       <div className="dashboard-task-complete">
-                        <button type="button">
-                          <img src={completeButton} alt={"add"} />
+                        <button
+                          type="button"
+                          onClick={Task => this.handleClick(Task, Task.id)}
+                        >
+                          {" "}
+                          <img
+                            src={completeButton}
+                            alt={"complete"}
+                            title={"complete"}
+                          />
                         </button>
                       </div>
                     </div>
@@ -101,11 +127,12 @@ export class Tasks extends Component {
   }
 }
 
+//maps the state of the props
 const mapStateToProps = state => ({
   tasks: state.tasks.tasks
 });
 
 export default connect(
   mapStateToProps,
-  { getTasks, deleteTask }
+  { getTasks, deleteTask, completeTask }
 )(Tasks);

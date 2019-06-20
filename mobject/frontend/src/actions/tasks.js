@@ -53,13 +53,13 @@ export const addTask = task => (dispatch, getState) => {
     );
 };
 
-//Complete task Task
+//Delete Tasks
 export const completeTask = id => (dispatch, getState) => {
   axios
     .put(`/api/tasks/${id}/`, tokenConfig(getState))
     .then(res => {
       //Message for adding leads
-      dispatch(createMessage({ completeTask: "task completed" }));
+      dispatch(createMessage({ completeTask: "task Deleted" }));
       dispatch({
         type: COMPLETE_TASK,
         payload: id

@@ -59,7 +59,7 @@ export const completeTask = (id, task) => (dispatch, getState) => {
     .put(`/api/tasks/${id}/`, task, tokenConfig(getState))
     .then(res => {
       //Message for adding leads
-      dispatch(createMessage({ completeTask: "task Deleted" }));
+      dispatch(createMessage({ completeTask: "task completed" }));
       dispatch({
         type: COMPLETE_TASK,
         payload: id

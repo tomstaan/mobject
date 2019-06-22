@@ -31,8 +31,7 @@ export default function(state = initialState, action) {
       };
     case COMPLETE_TASK:
       return {
-        ...state,
-        tasks: action.task
+        ...state
       };
     default:
       return state;

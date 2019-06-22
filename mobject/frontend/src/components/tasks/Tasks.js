@@ -30,18 +30,27 @@ export class Tasks extends Component {
   }
 
   completeClick = e => {
-    console.log(e);
     var task = { ...this.state.e };
     e.completed = true;
     this.setState({ task });
-    console.log(e.id);
+    this.props.completeTask(e.id, e);
+  };
+
+  undoClick = e => {
+    var task = { ...this.state.e };
+    e.completed = false;
+    this.setState({ task });
     this.props.completeTask(e.id, e);
   };
 
   render() {
+    /*
     const task_completed = (
       <div className="task-complete-back">
-        <button className="task-delete-confirm">
+        <button
+          onClick={this.props.deleteTask.bind(this, Task.id)}
+          className="task-delete-confirm"
+        >
           <img src={deleteButton} alt={"delete"} />
         </button>
         <div className="task-complete-cont">
@@ -56,7 +65,7 @@ export class Tasks extends Component {
         </div>
       </div>
     );
-
+*/
     const pr_1 = <div className="dashboard-task-inline-1" />;
     const pr_2 = <div className="dashboard-task-inline-2" />;
     const pr_3 = <div className="dashboard-task-inline-3" />;
@@ -114,7 +123,28 @@ export class Tasks extends Component {
                       </div>
                     </div>
                   </div>
-                  {Task.completed ? task_completed : ""}
+                  {Task.completed ? (
+                    <div className="task-complete-back">
+                      <button
+                        onClick={this.props.deleteTask.bind(this, Task.id)}
+                        className="task-delete-confirm"
+                      >
+                        <img src={deleteButton} alt={"delete"} />
+                      </button>
+                      <div className="task-complete-cont">
+                        <div className="task-complete-circle">
+                          <div className="task-complete-svg">
+                            <img src={completedButton} alt={"completed"} />
+                          </div>
+                        </div>
+                        <a onClick={this.undoClick.bind(this, Task)}>
+                          <h4>Undo</h4>
+                        </a>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
                 </div>
               );
             })}

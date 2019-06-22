@@ -32,7 +32,7 @@ export default function(state = initialState, action) {
     case COMPLETE_TASK:
       return {
         ...state,
-        tasks: [...state.tasks, action.payload]
+        tasks: action.task
       };
     default:
       return state;

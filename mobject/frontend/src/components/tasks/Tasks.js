@@ -11,6 +11,13 @@ import completedButton from "./../style/images/check.png";
 import deleteButton from "./../style/images/delete.png";
 
 export class Tasks extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tasks: []
+    };
+  }
+
   static propTypes = {
     tasks: PropTypes.array.isRequired,
     getTasks: PropTypes.func.isRequired,
@@ -21,6 +28,15 @@ export class Tasks extends Component {
   componentDidMount() {
     this.props.getTasks();
   }
+
+  completeClick = e => {
+    console.log(e);
+    var task = { ...this.state.e };
+    e.completed = true;
+    this.setState({ task });
+    console.log(e.id);
+    this.props.completeTask(e.id, e);
+  };
 
   render() {
     const task_completed = (
@@ -86,8 +102,7 @@ export class Tasks extends Component {
                       <div className="dashboard-task-complete">
                         <button
                           type="button"
-                          key={Task.id}
-                          onClick={this.props.completeTask.bind(this, Task.id)}
+                          onClick={this.completeClick.bind(this, Task)}
                         >
                           {" "}
                           <img

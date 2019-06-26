@@ -8,10 +8,11 @@ import Panel from "./Panel";
 export default function Dashboard() {
   return (
     <Fragment>
-      <Panel />
       <div className="add-task-container">
         <Form />
       </div>
+      <Panel />
+
       <Tasks />
     </Fragment>
   );

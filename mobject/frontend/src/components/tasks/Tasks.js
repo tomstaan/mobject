@@ -44,28 +44,6 @@ export class Tasks extends Component {
   };
 
   render() {
-    /*
-    const task_completed = (
-      <div className="task-complete-back">
-        <button
-          onClick={this.props.deleteTask.bind(this, Task.id)}
-          className="task-delete-confirm"
-        >
-          <img src={deleteButton} alt={"delete"} />
-        </button>
-        <div className="task-complete-cont">
-          <div className="task-complete-circle">
-            <div className="task-complete-svg">
-              <img src={completedButton} alt={"completed"} />
-            </div>
-          </div>
-          <a>
-            <h4>Undo</h4>
-          </a>
-        </div>
-      </div>
-    );
-*/
     const pr_1 = <div className="dashboard-task-inline-1" />;
     const pr_2 = <div className="dashboard-task-inline-2" />;
     const pr_3 = <div className="dashboard-task-inline-3" />;

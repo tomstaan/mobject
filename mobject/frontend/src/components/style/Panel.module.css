@@ -1,9 +1,10 @@
 .panel-back {
   position: fixed;
   width: 7%;
-  min-width: 100px;
   height: 100vh;
   float: left;
+  min-width: 100px;
+  left: 0px;
 }
 
 .dash-buttons {

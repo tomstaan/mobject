@@ -135,8 +135,17 @@ body {
 }
 
 .add-task-container {
-  position: relative;
-  display: none;
+  position: absolute;
+  height: 100vh;
+  left: 0px;
+  width: 100%;
+  backdrop-filter: blur(20px);
+  z-index: 250;
+  background: linear-gradient(
+    159deg,
+    rgba(108, 108, 108, 0.28820028011204482) 0%,
+    rgba(108, 108, 108, 0.29380252100840334) 100%
+  );
 }
 .header-back {
   display: none;

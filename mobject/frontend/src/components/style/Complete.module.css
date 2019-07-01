@@ -8,8 +8,8 @@
   border-radius: 13px;
   background: linear-gradient(
     159deg,
-    rgba(3, 10, 25, 0.7027661064425771) 0%,
-    rgba(3, 10, 25, 0.7) 100%
+    rgba(3, 10, 25, 0.8) 0%,
+    rgba(3, 10, 25, 0.8) 100%
   );
 }
 .task-complete-cont {

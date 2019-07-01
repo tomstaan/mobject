@@ -3,10 +3,12 @@ import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { addTask } from "../../actions/tasks";
 import "./../style/Task.module.css";
-import styled from "styled-components";
+/* Slider */
 import closeButton from "./../style/images/delete.png";
 
-const Styles = styled.div``;
+/* React Date Picker */
+//import DayPicker from "react-day-picker";
+//import "react-day-picker/lib/style.css";
 
 export class Form extends React.Component {
   state = {
@@ -21,6 +23,8 @@ export class Form extends React.Component {
   };
 
   onChange = e => this.setState({ [e.target.name]: e.target.value });
+
+  onSliderChange = e => this.setState({ priority: e.target.value });
 
   onSubmit = e => {
     e.preventDefault();
@@ -72,33 +76,62 @@ export class Form extends React.Component {
                 Description
               </label>
             </div>
-            <div className="form-group">
-              <input
-                className="form-control"
-                name="deadline"
-                type="date"
-                onChange={this.onChange}
-                value={deadline}
-              />
+
+            <div className="task-date-cont">
+              <label>Today</label>
             </div>
-            <Styles>
-              <div className="form-group">
+
+            <div className="priority-picker">
+              <label>Priority</label>
+              <div className="priority-numbers">
+                <div className="priority-number">
+                  {this.state.priority == 1 ? (
+                    <h3 className="priority-select">1</h3>
+                  ) : (
+                    <h3 className="priority-unselect">1</h3>
+                  )}
+                </div>
+                <div className="priority-number">
+                  {this.state.priority == 2 ? (
+                    <h3 className="priority-select">2</h3>
+                  ) : (
+                    <h3 className="priority-unselect">2</h3>
+                  )}
+                </div>
+                <div className="priority-number">
+                  {this.state.priority == 3 ? (
+                    <h3 className="priority-select">3</h3>
+                  ) : (
+                    <h3 className="priority-unselect">3</h3>
+                  )}
+                </div>
+                <div className="priority-number">
+                  {this.state.priority == 4 ? (
+                    <h3 className="priority-select">4</h3>
+                  ) : (
+                    <h3 className="priority-unselect">4</h3>
+                  )}
+                </div>
+                <div className="priority-number">
+                  {this.state.priority == 5 ? (
+                    <h3 className="priority-select">5</h3>
+                  ) : (
+                    <h3 className="priority-unselect">5</h3>
+                  )}
+                </div>
+              </div>
+              <div className="slider-priority">
                 <input
-                  className="form-control"
-                  name="priority"
-                  type="number"
-                  onChange={this.onChange}
+                  type="range"
+                  min={1}
+                  max={5}
                   value={priority}
-                  min="1"
-                  max="5"
+                  onChange={this.onSliderChange}
                 />
               </div>
-            </Styles>
-
-            <div className="form-group">
-              <button type="submit" className="btn btn-primary">
-                Submit
-              </button>
+              <div className="complete-form">
+                <button type="submit">ADD</button>
+              </div>
             </div>
           </form>
         </div>

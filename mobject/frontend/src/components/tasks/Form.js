@@ -73,7 +73,7 @@ export class Form extends React.Component {
                 id="label-description"
               />
               <label className="placeholder-text" htmlFor="label-description">
-                Description
+                Description 
               </label>
             </div>
 

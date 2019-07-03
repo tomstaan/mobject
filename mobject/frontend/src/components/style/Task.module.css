@@ -2,7 +2,7 @@
   position: relative;
   width: 400px;
   margin: auto;
-  top: 20vh;
+  top: 14vh;
   overflow: hidden;
   background-color: #f2f2f2;
   border-radius: 25px;
@@ -307,6 +307,7 @@ input[type="range"]::-ms-thumb {
 
 .priority-picker {
   position: relative;
+  z-index: 255;
   width: 90%;
   margin: auto;
 }
@@ -465,6 +466,7 @@ input[type="range"]::-ms-thumb {
 .task-date-cont {
   height: 40px;
   width: 100%;
+  position: relative;
   background: linear-gradient(
     28deg,
     rgba(16, 29, 54, 1) 0%,
@@ -482,9 +484,8 @@ input[type="range"]::-ms-thumb {
   cursor: pointer;
   margin-bottom: 15px;
 }
-.task-date-cont:hover {
+.task-date-cont:hover ~ label {
   opacity: 0.85;
-  position: relative;
 }
 .task-date-cont label {
   position: relative;
@@ -495,4 +496,15 @@ input[type="range"]::-ms-thumb {
   margin: auto;
   text-align: center;
   height: 40px;
+}
+
+/* Task Date Box */
+.task-date-box {
+  z-index: 260;
+  margin-top: 40px;
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  top: 0px;
+  background-color: #fff;
 }

@@ -79,6 +79,7 @@ export class Form extends React.Component {
 
             <div className="task-date-cont">
               <label>Today</label>
+              <div className="task-date-box"></div>
             </div>
 
             <div className="priority-picker">

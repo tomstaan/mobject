@@ -25,11 +25,13 @@ export class Header extends Component {
             onClick={this.props.logout}
             className="nav-link btn btn-info btn-sm text-light"
           >
+
             Logout
           </button>
         </li>
       </ul>
     );
+
 
     //Menu for guests
     const guestLinks = (

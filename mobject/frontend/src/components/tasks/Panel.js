@@ -9,6 +9,7 @@ import searchButton from "./../style/images/search.png";
 import addButton from "./../style/images/add.png";
 
 export default class Panel extends React.Component {
+
   render() {
     return (
       <Fragment>
@@ -30,9 +31,9 @@ export default class Panel extends React.Component {
               </button>
             </div>
             <div className="add-button">
-              <button type="button">
+              <a href="#"><button type="button">
                 <img src={addButton}></img>
-              </button>
+              </button></a>
             </div>
           </div>
         </div>

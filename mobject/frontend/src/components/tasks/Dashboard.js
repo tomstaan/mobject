@@ -11,9 +11,7 @@ import Panel from "./Panel";
 export default function Dashboard() {
   return (
     <Fragment>
-      <div className="add-task-container">
-        <Form />
-      </div>
+      <Form />
       <Panel />
 
       <Tasks />

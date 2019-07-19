@@ -1,4 +1,6 @@
 import React, { Component, Fragment } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 import "./../style/App.module.css";
 import "./../style/Dashboard.module.css";
 import "./../style/Panel.module.css";
@@ -8,7 +10,32 @@ import filterButton from "./../style/images/filter.png";
 import searchButton from "./../style/images/search.png";
 import addButton from "./../style/images/add.png";
 
-export default class Panel extends React.Component {
+//Form
+import { showTaskForm } from "../../actions/visible";
+
+export class Panel extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      visible: []
+    };
+  }
+
+  static propTypes = {
+    showTaskForm: PropTypes.func.isRequired
+  };
+
+  showForm = (e) => {
+    e.preventDefault();
+    this.setState({
+      visible:[
+        {
+          visible: true
+        }
+      ]
+    });
+    this.props.showTaskForm();
+  }
 
   render() {
     return (
@@ -31,7 +58,7 @@ export default class Panel extends React.Component {
               </button>
             </div>
             <div className="add-button">
-              <a href="#"><button type="button">
+              <a href="#" onClick={this.showForm}><button type="button">
                 <img src={addButton}></img>
               </button></a>
             </div>
@@ -41,3 +68,13 @@ export default class Panel extends React.Component {
     );
   }
 }
+
+//maps the state of the props
+const mapStateToProps = state => ({
+  visible: state.visible.visible
+});
+
+export default connect(
+  mapStateToProps,
+  { showTaskForm }
+)(Panel);

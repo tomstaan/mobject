@@ -1,15 +1,8 @@
-//Show task form
-export const showTaskForm = (visible) => (dispatch) => {
-    dispatch({
-        type: SHOW_TASK_FORM,
-        payload: visible
-    });
-};
+import { TOGGLE_TASK_FORM } from "./types";
 
-//Hide task form
-export const hideTaskForm = (visible) => (dispatch) => {
-    dispatch({
-        type: HIDE_TASK_FORM,
-        payload: visible
-    });
+//Show task form
+export const toggleTaskForm = dispatch => {
+  dispatch({
+    type: TOGGLE_TASK_FORM
+  });
 };

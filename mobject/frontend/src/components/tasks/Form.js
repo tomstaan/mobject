@@ -32,8 +32,13 @@ export class Form extends React.Component {
     toggleTaskForm: PropTypes.func.isRequired
   };
 
-  onClickFormToggle = () => {
-    this.props.toggleTaskForm();
+  onClickFormToggle = e => {
+    console.log("Pre Toggle Menu = " + this.state.visible);
+    this.setState = {
+      visible: [{ toggleForm: false }]
+    };
+    console.log("Post Toggle Menu = " + this.state.visible);
+    this.props.toggleTaskForm(e);
   };
 
   onChange = e => this.setState({ [e.target.name]: e.target.value });
@@ -45,7 +50,6 @@ export class Form extends React.Component {
     const { title, description, priority, deadline } = this.state;
     const task = { title, description, priority, deadline };
     this.props.addTask(task);
-    console.log(visible);
     this.setState({
       title: "",
       description: "",
@@ -57,13 +61,13 @@ export class Form extends React.Component {
   render() {
     const { title, description, priority, deadline } = this.state;
     // toggle form
-    if (this.state.hideForm == true) {
+    if (this.state.toggleForm == true) {
       return (
         <div className="add-task-container">
           <div className="add-form-back">
             <h3 className="tasks-form-heading">New Task</h3>
             <button
-              onClick={this.toggleTaskForm}
+              onClick={this.onClickFormToggle}
               type="button"
               className="close-task-button"
             >
@@ -183,11 +187,11 @@ export class Form extends React.Component {
 //maps the state of the props
 function mapStateToProps(state) {
   return {
-    visible: state.showTaskForm
+    visible: state.toggleTaskForm
   };
 }
 
 export default connect(
   mapStateToProps,
-  { addTask, showTaskForm }
+  { addTask, toggleTaskForm }
 )(Form);

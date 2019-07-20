@@ -11,9 +11,10 @@ import searchButton from "./../style/images/search.png";
 import addButton from "./../style/images/add.png";
 
 //Form
-import { showTaskForm } from "../../actions/visible";
+import { toggleTaskForm } from "../../actions/visible";
 
 export class Panel extends React.Component {
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -22,19 +23,17 @@ export class Panel extends React.Component {
   }
 
   static propTypes = {
-    showTaskForm: PropTypes.func.isRequired
+    toggleTaskForm: PropTypes.func.isRequired
   };
-
+  
   showForm = (e) => {
     e.preventDefault();
     this.setState({
       visible:[
-        {
-          visible: true
-        }
+        {toggleForm: true}
       ]
     });
-    this.props.showTaskForm();
+    this.props.toggleTaskForm();
   }
 
   render() {
@@ -71,10 +70,10 @@ export class Panel extends React.Component {
 
 //maps the state of the props
 const mapStateToProps = state => ({
-  visible: state.visible.visible
+  visible: state.visible.showForm
 });
 
 export default connect(
   mapStateToProps,
-  { showTaskForm }
+  { toggleTaskForm }
 )(Panel);

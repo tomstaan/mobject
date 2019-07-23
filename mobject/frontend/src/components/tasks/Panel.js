@@ -68,6 +68,7 @@ export class Panel extends React.Component {
   }
 }
 
+
 //maps the state of the props
 const mapStateToProps = state => ({
   visible: state.visible.showForm

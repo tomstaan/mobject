@@ -13,13 +13,14 @@ import closeButton from "./../style/images/delete.png";
 //import "react-day-picker/lib/style.css";
 
 export class Form extends React.Component {
+  /*
   constructor(props) {
     super(props);
     this.state = {
-      visible: []
+      visible:[]
     };
   }
-
+*/
   state = {
     title: "",
     description: "",
@@ -29,9 +30,9 @@ export class Form extends React.Component {
 
   static propTypes = {
     addTask: PropTypes.func.isRequired,
-    toggleTaskForm: PropTypes.func.isRequired
+    //toggleTaskForm: PropTypes.func.isRequired
   };
-
+  /*
   onClickFormToggle = e => {
     console.log("Pre Toggle Menu = " + this.state.visible);
     this.setState = {
@@ -40,7 +41,7 @@ export class Form extends React.Component {
     console.log("Post Toggle Menu = " + this.state.visible);
     this.props.toggleTaskForm(e);
   };
-
+  */
   onChange = e => this.setState({ [e.target.name]: e.target.value });
 
   onSliderChange = e => this.setState({ priority: e.target.value });
@@ -67,7 +68,7 @@ export class Form extends React.Component {
           <div className="add-form-back">
             <h3 className="tasks-form-heading">New Task</h3>
             <button
-              onClick={this.onClickFormToggle}
+              /*onClick={this.onClickFormToggle}*/
               type="button"
               className="close-task-button"
             >
@@ -184,14 +185,15 @@ export class Form extends React.Component {
   }
 }
 
+/*
 //maps the state of the props
 function mapStateToProps(state) {
   return {
     visible: state.toggleTaskForm
   };
 }
-
+*/
 export default connect(
-  mapStateToProps,
-  { addTask, toggleTaskForm }
+  null,
+  { addTask/*, toggleTaskForm*/ }
 )(Form);

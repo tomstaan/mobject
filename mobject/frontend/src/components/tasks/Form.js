@@ -28,19 +28,8 @@ export class Form extends React.Component {
   };
 
   static propTypes = {
-    addTask: PropTypes.func.isRequired,
-    toggleTaskForm: PropTypes.func.isRequired
+    addTask: PropTypes.func.isRequired
   };
-
-  onClickFormToggle = e => {
-    console.log("Pre Toggle Menu = " + this.state.visible);
-    this.setState = {
-      visible: [{ toggleForm: false }]
-    };
-    console.log("Post Toggle Menu = " + this.state.visible);
-    this.props.toggleTaskForm(e);
-  };
-
   onChange = e => this.setState({ [e.target.name]: e.target.value });
 
   onSliderChange = e => this.setState({ priority: e.target.value });
@@ -59,15 +48,15 @@ export class Form extends React.Component {
   };
 
   render() {
-    const { title, description, priority, deadline } = this.state;
+    const { title, description, priority, deadline, toggleTask } = this.state;
     // toggle form
-    if (this.state.toggleForm == true) {
+    if (toggleTask == true) {
       return (
         <div className="add-task-container">
           <div className="add-form-back">
             <h3 className="tasks-form-heading">New Task</h3>
             <button
-              onClick={this.onClickFormToggle}
+              /*onClick={this.onClickFormToggle}*/
               type="button"
               className="close-task-button"
             >
@@ -179,17 +168,16 @@ export class Form extends React.Component {
           </div>
         </div>
       );
+    } else {
+      return "";
     }
-    return "";
   }
 }
 
 //maps the state of the props
-function mapStateToProps(state) {
-  return {
-    visible: state.toggleTaskForm
-  };
-}
+const mapStateToProps = state => ({
+  visible: state.visible.toggleTask
+});
 
 export default connect(
   mapStateToProps,

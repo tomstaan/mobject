@@ -14,27 +14,16 @@ import addButton from "./../style/images/add.png";
 import { toggleTaskForm } from "../../actions/visible";
 
 export class Panel extends React.Component {
-  
   constructor(props) {
     super(props);
     this.state = {
-      visible: []
+      toggleTask: this.props.toggleTask
     };
   }
 
   static propTypes = {
     toggleTaskForm: PropTypes.func.isRequired
   };
-  
-  showForm = (e) => {
-    e.preventDefault();
-    this.setState({
-      visible:[
-        {toggleForm: true}
-      ]
-    });
-    this.props.toggleTaskForm();
-  }
 
   render() {
     return (
@@ -57,9 +46,11 @@ export class Panel extends React.Component {
               </button>
             </div>
             <div className="add-button">
-              <a href="#" onClick={this.showForm}><button type="button">
-                <img src={addButton}></img>
-              </button></a>
+              <a href="#" onClick={this.props.toggleTaskForm.bind(this)}>
+                <button type="button">
+                  <img src={addButton}></img>
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -68,12 +59,7 @@ export class Panel extends React.Component {
   }
 }
 
-//maps the state of the props
-const mapStateToProps = state => ({
-  visible: state.visible.showForm
-});
-
 export default connect(
-  mapStateToProps,
+  null,
   { toggleTaskForm }
 )(Panel);

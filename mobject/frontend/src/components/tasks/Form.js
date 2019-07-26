@@ -13,13 +13,14 @@ import closeButton from "./../style/images/delete.png";
 //import "react-day-picker/lib/style.css";
 
 export class Form extends React.Component {
+  /*
   constructor(props) {
     super(props);
     this.state = {
-      visible: []
+      visible:[]
     };
   }
-
+*/
   state = {
     title: "",
     description: "",
@@ -174,12 +175,22 @@ export class Form extends React.Component {
   }
 }
 
+/*
 //maps the state of the props
+<<<<<<< HEAD
 const mapStateToProps = state => ({
   visible: state.visible.toggleTask
 });
 
+=======
+function mapStateToProps(state) {
+  return {
+    visible: state.toggleTaskForm
+  };
+}
+*/
+>>>>>>> 81c02e74214fb61f2af3754f7b55b1d5ce0b78fa
 export default connect(
-  mapStateToProps,
-  { addTask, toggleTaskForm }
+  null,
+  { addTask/*, toggleTaskForm*/ }
 )(Form);

@@ -87,12 +87,12 @@
         },
         "django-rest-knox": {
             "hashes": [
-                "sha256:097dc1b702cff7442b779ea1fdde4a543567bdd4902bd12ddcee8b9b09c50c9a",
-                "sha256:84d7180cce67ef385cf6922b2045e68074e352e889cf02c0aafb3f8a02e371df",
-                "sha256:9c78c0aa402efa2dc3f0d3ee1794942d8ca44fde3798a3cb2f031fd8051f2ad7"
+                "sha256:4a57b05b04fcccc41fcc969ad0e3f180467d7045b45003b58f5a437d6d3370d4",
+                "sha256:e4ac93e6d7dd63af5b58ff19d7f197788a874e932464d77db5630f185365eac0",
+                "sha256:f7dac2f7a6ece7c1bd331bdb01dc3d16e0b340f3d1001a7285cc13b171d539a3"
             ],
             "index": "pypi",
-            "version": "==4.0.1"
+            "version": "==4.1.0"
         },
         "djangorestframework": {
             "hashes": [

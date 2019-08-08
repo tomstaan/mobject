@@ -1,9 +1,9 @@
 .panel-back {
-  position: fixed;
+  position: relative;
   width: 7%;
   height: 100vh;
   float: left;
-  min-width: 100px;
+  max-width: 100px;
   left: 0px;
 }
 
@@ -12,20 +12,20 @@
   margin: auto;
   width: 60%;
   top: 30px;
-  height: 94vh;
+  height: 100vh;
 }
 
 .profile-button {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   position: relative;
   border-radius: 9px;
   transition: 0.3s ease;
 }
 .profile-button button {
-  width: 60px;
+  width: 50px;
   border-radius: 9px;
-  height: 60px;
+  height: 50px;
   position: relative;
   outline: none;
   transition: 0.3s ease;
@@ -53,8 +53,8 @@
 }
 
 .filter-button {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   margin-top: 10px;
   position: relative;
   border-radius: 9px;
@@ -65,9 +65,9 @@
   box-shadow: 6px 6px 17px -9px rgba(0, 0, 0, 0.43);
 }
 .filter-button button {
-  width: 60px;
+  width: 50px;
   border-radius: 9px;
-  height: 60px;
+  height: 50px;
   position: relative;
   outline: none;
   transition: 0.3s ease;
@@ -90,8 +90,8 @@
 }
 
 .search-button {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   margin-top: 10px;
   position: relative;
   border-radius: 9px;
@@ -102,9 +102,9 @@
   transition: 0.3s ease;
 }
 .search-button button {
-  width: 60px;
+  width: 50px;
   border-radius: 9px;
-  height: 60px;
+  height: 50px;
   position: relative;
   outline: none;
   transition: 0.3s ease;
@@ -131,8 +131,8 @@
 }
 
 .add-button {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   bottom: 0px;
   position: absolute;
   border-radius: 100%;
@@ -146,9 +146,9 @@
   opacity: 0.85;
 }
 .add-button button {
-  width: 60px;
+  width: 50px;
   border-radius: 100%;
-  height: 60px;
+  height: 50px;
   position: relative;
   outline: none;
   transition: 0.3s ease;

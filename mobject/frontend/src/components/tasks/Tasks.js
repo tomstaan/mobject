@@ -72,11 +72,7 @@ export class Tasks extends Component {
                         : pr_5}
                     </div>
                     <p>
-                      There are many variations of passages of Lorem Ipsum
-                      available, but the majority have suffered alteration in
-                      some form, by injected humour, or randomised words which
-                      don't look even slightly believable. If you are going to
-                      use a passage of Lorem Ipsum, you need to
+                      {Task.description}
                     </p>
                   </div>
                   <div className="dashboard-task-cover">

@@ -9127,10 +9127,10 @@ react-alert@^5.5.0:
   resolved "https://registry.yarnpkg.com/react-alert/-/react-alert-5.5.0.tgz#9154d67e31f72ad439c7147c9bb991f4696e0810"
   integrity sha512-PzB6ktBmtNZkmgZVdPp/Wbe/zjIBzqBu9QHLTrfquUVVPCVVfn3lPWOebejEg6VOxGepIPOSAsb1bd3ESMyC0Q==
 
-react-day-picker@^7.3.1:
-  version "7.3.1"
-  resolved "https://registry.yarnpkg.com/react-day-picker/-/react-day-picker-7.3.1.tgz#949b752af6c4219c3d741dacfc3ce10dc6e2d26f"
-  integrity sha512-51GkSD0LW3uHBWCcwENMxJmniG+1jPQDtADpOu21+KYOvNHLFjlW+LdB/b/35SGJKEE502SyYqueutr4PD0czQ==
+react-day-picker@^7.3.2:
+  version "7.3.2"
+  resolved "https://registry.yarnpkg.com/react-day-picker/-/react-day-picker-7.3.2.tgz#b9b9b0000ba53b2c9df9bccb79664862aba6b60a"
+  integrity sha512-mij2j2Un/v2V2ow+hf/hFBMdl6Eis/C/YhBtlI6Xpbvh3Q6WMix78zEkCdw6i9GldafOrpnupWKofv/h5oSI4g==
   dependencies:
     prop-types "^15.6.2"
 
@@ -9803,14 +9803,6 @@ sax@^1.2.1, sax@^1.2.4, sax@~1.2.1, sax@~1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
-
-scheduler@^0.13.6:
-  version "0.13.6"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.13.6.tgz#466a4ec332467b31a91b9bf74e5347072e4cd889"
-  integrity sha512-IWnObHt413ucAYKsD9J1QShUKkbKLQQHdxRyw73sw4FN26iWr3DY/H34xGPe4nmL1DwXyWmSWmMrA9TfQbE/XQ==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
 
 scheduler@^0.15.0:
   version "0.15.0"
